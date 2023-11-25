@@ -31,7 +31,6 @@ h1 {
 
 main {
 	margin: 1rem auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 1rem;
 	padding-top: 4rem;
 	display: flex;
@@ -82,7 +81,7 @@ label.checked {
 	text-decoration: line-through;
   }
 .important{
-	font-size: bolder;
+	font-weight: bolder;
 	color: darkgreen;
 }
 @media only screen and (min-width: 32.5em) {
