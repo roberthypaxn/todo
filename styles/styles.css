@@ -1,10 +1,12 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Acme, Arial, sans-serif;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+	color: #f0f8ff;
 }
 html{
-	background-color: black;
+	background-color: #f0f8ff;
 	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -14,25 +16,28 @@ html{
 body {
 	height: 90vh;
 	min-width: 280px;
-	width: 50vw;
+	width: 80%;
 	border: 5px dashed black;
+	border-radius: 10px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: #f0f8ff;
-	
+	background-color: #000000;
+	overflow-y: auto;
 }
 
 h1 {
 	font-size: 1.5rem;
+	text-align: center;
+	padding: 1em;
 }
 
 main {
 	margin: 1rem auto;
 	padding: 1rem;
-	padding-top: 4rem;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -43,14 +48,29 @@ button{
 	padding: 0.2rem;
 	border: 3px solid;
 }
-
+input{
+	background-color: black;
+	color: #f0f8ff;
+	border-color: #f0f8ff;
+}
 button {
 	margin: 0.5rem;
 	margin-bottom: 20px;
-	
-	box-shadow: 0px 10px 0px 0px #000;
+	background-color: black;
+	color: #f0f8ff;
+	box-shadow: 0px 10px 0px 0px #f0f8ff;
 }
 
+button:hover{
+	background-color: rgb(179, 179, 255);
+	color: #000000;
+	border: 3px solid #f0f8ff;
+	
+	box-shadow: 0 10px 0 #f0f8ff,
+                5px 15px 0 rgb(223, 179, 255),
+                -5px 10px 0px rgb(102, 102, 252),
+                15px 10px 0px rgb(84, 84, 172);
+}
 .delete {
 	width: fit-content;
 }
@@ -65,7 +85,8 @@ button {
 
 .output {
 	padding: 0.5rem;
-	
+	margin-top: 1em;
+	margin-bottom: 1em;
 
 }
 
@@ -89,7 +110,7 @@ label.checked {
   }
 .important{
 	font-weight: bolder;
-	border: 2px solid black;
+	border: 2px solid #f0f8ff;
 	padding: 1px;
 }
 @media only screen and (min-width: 32.5em) {
@@ -112,8 +133,9 @@ label.checked {
 @media only screen and (max-width: 31.188rem){
 
 	body{
-		width: 100vw;
+		width: 93%;
 		margin: 0 auto;
+		height: 95%;
 	}
 	main{
 		width: 99%;

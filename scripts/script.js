@@ -58,9 +58,12 @@ button.addEventListener("click", function () {
 
   // Insert the new list item at the beginning of the list
   list.insertBefore(listItem, list.firstChild);
-  output.style.border = "1.5px dashed black";
+
+  //inputField.value ='';
+
+  output.style.border = "1.5px dashed white";
   output.style.width = "70%";
-  output.style.margin = "0 auto";
+  output.style.margin = "1em auto";
   output.style.padding = "0.5rem";
   
 });
