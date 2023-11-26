@@ -38,6 +38,7 @@ button.addEventListener("click", function () {
   // Mark as Important button
   const importantButton = document.createElement("button");
   importantButton.textContent = "★";
+  importantButton.title = "Mark as important";
   importantButton.addEventListener("click", function() {
     listItem.classList.toggle('important');
   });
@@ -47,6 +48,8 @@ button.addEventListener("click", function () {
   // delete button
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
+  deleteButton.classList.add("delete");
+  deleteButton.title = "Delete Item";
   deleteButton.addEventListener("click", function() {
     list.removeChild(listItem);
     if (list.childNodes.length === 0) {
@@ -59,11 +62,12 @@ button.addEventListener("click", function () {
   // Insert the new list item at the beginning of the list
   list.insertBefore(listItem, list.firstChild);
 
-  //inputField.value ='';
+  inputField.value ='';
 
-  output.style.border = "1.5px dashed white";
-  output.style.width = "70%";
-  output.style.margin = "1em auto";
-  output.style.padding = "0.5rem";
-  
+  // output.style.border = "1.5px dashed white";
+  // output.style.width = "95%";
+  // output.style.margin = "1em auto";
+  // output.style.padding = "0.5rem";
+  importantButton.style.color = "gold";
+  importantButton.style.border = "3px solid white"
 });

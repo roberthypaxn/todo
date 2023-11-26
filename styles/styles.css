@@ -6,7 +6,7 @@
 	color: #f0f8ff;
 }
 html{
-	background-color: #f0f8ff;
+	background-color: #fff;
 	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -17,8 +17,7 @@ body {
 	height: 90vh;
 	min-width: 280px;
 	width: 80%;
-	border: 5px dashed black;
-	border-radius: 10px;
+	border: 5px dashed #fff;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -47,6 +46,7 @@ input,
 button{
 	padding: 0.2rem;
 	border: 3px solid;
+	border-radius: 5px;
 }
 input{
 	background-color: black;
@@ -71,9 +71,7 @@ button:hover{
                 -5px 10px 0px rgb(102, 102, 252),
                 15px 10px 0px rgb(84, 84, 172);
 }
-.delete {
-	width: fit-content;
-}
+
 
 .input {
 	display: flex;
@@ -85,9 +83,8 @@ button:hover{
 
 .output {
 	padding: 0.5rem;
-	margin-top: 1em;
-	margin-bottom: 1em;
-
+	margin:1em auto;
+	width: 95%;
 }
 
 ul {
@@ -99,8 +96,9 @@ li {
 	display: flex;
 	align-items: center;
 	padding: 5px;
-	gap: 5px;
+	gap: 1em;
 	justify-content: center;
+	margin: 5px;
 }
 label{
 	font-weight: bold;
@@ -108,11 +106,68 @@ label{
 label.checked {
 	text-decoration: line-through;
   }
-.important{
+.important *{
 	font-weight: bolder;
-	border: 2px solid #f0f8ff;
+	border: 3px solid gold;
 	padding: 1px;
+	box-shadow: 0px 10px 0px 0px gold;
 }
+.important label{
+	border: none;
+	box-shadow: none;
+	color: rgb(179, 179, 255);
+}
+.important input[type="checkbox"] {
+	border: 3px solid #f0f8ff;
+	box-shadow: none;
+}
+.delete {
+	border: 3px solid #f0f8ff;
+	box-shadow: 0px 10px 0px 0px #f0f8ff;
+}
+input[type="checkbox"]{
+	appearance: none;
+	-webkilt-appearance: none;
+	background-color: #000000;
+	border-radius: 3px;
+	height: 20px;
+	width: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+input[type="checkbox"]:after{
+	content: "✓";
+	font-weight: bold;
+	font-size: 20px;
+	color: #f0f8ff;
+	display: none;
+}
+input[type="checkbox"]:hover{
+	background-color: rgb(179, 179, 255);
+	box-shadow: 0 7px 0 #f0f8ff,
+                5px 11px 0 rgb(223, 179, 255),
+                -5px 10px 0px rgb(102, 102, 252),
+                12px 5px 0px rgb(84, 84, 172);
+}
+input[type="checkbox"]:checked{
+	background-color: rgb(179, 179, 255);
+	box-shadow: 0px 10px 0px 0px #f0f8ff;
+	margin-bottom: 10px;
+}
+input[type="checkbox"]:checked:hover{
+	box-shadow: 0 7px 0 #f0f8ff,
+                5px 11px 0 rgb(223, 179, 255),
+                -5px 10px 0px rgb(102, 102, 252),
+                12px 5px 0px rgb(84, 84, 172);
+}
+input[type="checkbox"]:checked:after{
+	display: block;
+}
+
 @media only screen and (min-width: 32.5em) {
 	h1 {
 		font-size: 2rem;
@@ -139,11 +194,18 @@ label.checked {
 	}
 	main{
 		width: 99%;
+		height: 100%;
 	}
 	.input{
 		flex-direction: column;
 	}
 	h1{
 		font-size: 1.27rem;
+	}
+	li {
+		gap: 5px;
+	}
+	.output{
+		border: none;
 	}
 }
