@@ -70,9 +70,6 @@ button.addEventListener("click", function () {
   inputField.value ='';
 
   // output.style.border = "1.5px dashed white";
-  // output.style.width = "95%";
-  // output.style.margin = "1em auto";
-  // output.style.padding = "0.5rem";
   importantButton.style.color = "gold";
   importantButton.style.border = "3px solid white"
 });

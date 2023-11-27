@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Courier New', Courier, monospace;
-	color: #f0f8ff;
 }
 html{
 	background-color: #fff;
@@ -28,9 +27,14 @@ body {
 }
 
 h1 {
+	font-family: monospace;
 	font-size: 1.5rem;
 	text-align: center;
 	padding: 1em;
+	color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 1.5px rgb(179, 179, 255);
+    font-size: 3em;
 }
 
 main {
@@ -78,6 +82,7 @@ button:hover{
 	gap: 1rem;
 	justify-content: center;
 	align-items: center;
+	color: #f0f8ff;
 }
 
 
@@ -85,6 +90,7 @@ button:hover{
 	padding: 0.5rem;
 	margin:1em auto;
 	width: 95%;
+	color: #f0f8ff;
 }
 
 ul {
@@ -102,10 +108,13 @@ li {
 }
 label{
 	font-weight: bold;
+	font-size: 1.2em;
 }
 label.checked {
 	text-decoration: line-through;
-  }
+	text-decoration-color: rgb(253, 171, 171);
+	text-decoration-thickness: 2px;
+}
 .important *{
 	font-weight: bolder;
 	border: 3px solid gold;
