@@ -138,12 +138,5 @@ function attachButtonListeners() {
         saveTasks();
       });
     });
-    checkboxes.forEach(function (checkbox) {
-        checkbox.addEventListener("change", function () {
-          const listItem = checkbox.parentNode;
-          label = listItem.querySelector("label"); // Get the associated label
-          label.classList.toggle("checked", checkbox.checked);
-          saveTasks();
-        });
-      });
   }
+  
