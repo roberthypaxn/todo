@@ -167,7 +167,11 @@ input[type="checkbox"]:checked:hover{
 input[type="checkbox"]:checked:after{
 	display: block;
 }
-
+#noInput{
+	text-align: center;
+	color: rgb(253, 171, 171);
+	font-weight: bold;
+}
 @media only screen and (min-width: 32.5em) {
 	h1 {
 		font-size: 2rem;

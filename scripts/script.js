@@ -9,10 +9,15 @@ button.addEventListener("click", function () {
   const inputValue = inputField.value;
   if (!inputValue) {
     noInput.textContent = "Please enter a valid task.";
+    noInput.style.display = "block"; // Make sure it's visible
+    setTimeout(function() {
+      // Hide the content again after 3000 milliseconds (3 seconds)
+      noInput.style.display = "none";
+    }, 3000);
     return;
   }
 
-  noInput.textContent = "";
+  noInput.textContent = "";//just to make sure
   const listItem = document.createElement("li");
 
   // Create checkbox
