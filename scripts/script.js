@@ -51,7 +51,6 @@ button.addEventListener("click", function () {
   // Event listener for checkbox change
   checkbox.addEventListener("change", function () {
     label.classList.toggle("checked", checkbox.checked);
-    saveTasks();
   });
 
   // Create a label for the task
