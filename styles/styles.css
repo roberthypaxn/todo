@@ -5,7 +5,7 @@
 	font-family: 'Courier New', Courier, monospace;
 }
 html{
-	background-color: #fff;
+	background-color: rgba(179, 179, 255, 0.5);
 	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -17,6 +17,7 @@ body {
 	min-width: 280px;
 	width: 80%;
 	border: 5px dashed #fff;
+	border-radius: 10px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
