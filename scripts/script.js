@@ -127,6 +127,7 @@ function saveTasks() {
 function attachButtonListeners() {
     const deleteButtons = document.querySelectorAll(".delete");
     const importantButtons = document.querySelectorAll("[title='Mark as important']");
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   
     deleteButtons.forEach(function (button) {
       button.addEventListener("click", function () {
@@ -145,6 +146,13 @@ function attachButtonListeners() {
         const listItem = button.parentNode;
         listItem.classList.toggle("important");
         saveTasks();
+      });
+    });
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+          const label = checkbox.nextElementSibling; // Assuming the label is right after the checkbox
+          label.classList.toggle("checked");
+          saveTasks();
       });
     });
   }
