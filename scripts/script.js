@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach event listeners to the delete and ★ buttons
     attachButtonListeners();
   }
+  // Loop through each label with the class 'checked' and set the corresponding checkbox as checked
+  document.querySelectorAll(".checked").forEach(function (label) {
+    const checkbox = label.previousElementSibling; // Assuming the checkbox is right before the label
+    if (checkbox && checkbox.type === "checkbox") {
+      checkbox.checked = true;
+    }
+  });
 });
 
 // Event listener for the button click
