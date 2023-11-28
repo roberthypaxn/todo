@@ -45,6 +45,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	flex: 1; /* Add this line */
 }
 
 input,
@@ -79,6 +80,7 @@ button {
 	margin:1em auto;
 	width: 95%;
 	color: #f0f8ff;
+	border: 1px solid red;
 }
 
 ul {
@@ -157,7 +159,7 @@ input[type="checkbox"]:checked:after{
 	color: rgb(253, 171, 171);
 	font-weight: bold;
 }
-footer *{
+.copyright{
 	color: #f0f8ff;
 	text-align: center;
 }
