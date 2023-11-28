@@ -228,6 +228,9 @@ input[type="checkbox"]:checked:after{
 	main{
 		width: 90%;
 	}
+	label{
+		font-size: .9em;
+	}
 }
 @media only screen and (max-width: 31.188rem){
 
