@@ -1,5 +1,5 @@
 // Selecting elements from the DOM
-const button = document.querySelector("button");
+const addTaskbutton = document.querySelector("#addTask");
 const inputField = document.querySelector("#task");
 const list = document.querySelector("#list");
 const noInput = document.querySelector("#noInput");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Event listener for the button click
-button.addEventListener("click", function () {
+addTaskbutton.addEventListener("click", function () {
   // Get the value from the input field
   const inputValue = inputField.value;
   
@@ -51,6 +51,7 @@ button.addEventListener("click", function () {
   // Event listener for checkbox change
   checkbox.addEventListener("change", function () {
     label.classList.toggle("checked", checkbox.checked);
+    saveTasks(); // Save tasks after marking as done
   });
 
   // Create a label for the task
@@ -65,6 +66,7 @@ button.addEventListener("click", function () {
   // Create a button to mark the task as important
   const importantButton = document.createElement("button");
   importantButton.textContent = "★";
+  importantButton.classList.add("markImportant");
   importantButton.title = "Mark as important";
 
   // Event listener for the important button click
@@ -107,7 +109,7 @@ button.addEventListener("click", function () {
   importantButton.style.border = "3px solid white";
 
   saveTasks(); // Save tasks after adding a new one
-  attachButtonListeners(); // Attach event listeners after adding a new task
+  //attachButtonListeners(); // Attach event listeners after adding a new task
 });
 
 // Function to save tasks to localStorage
