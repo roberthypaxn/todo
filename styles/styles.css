@@ -80,7 +80,6 @@ button {
 	margin:1em auto;
 	width: 95%;
 	color: #f0f8ff;
-	border: 1px solid red;
 }
 
 ul {
@@ -160,7 +159,7 @@ input[type="checkbox"]:checked:after{
 	font-weight: bold;
 }
 .copyright{
-	color: #f0f8ff;
+	color: rgb(223, 179, 255);
 	text-align: center;
 }
 @media (hover: hover){
