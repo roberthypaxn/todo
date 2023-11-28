@@ -45,7 +45,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	flex: 1; /* Add this line */
+	flex: 1;
 }
 
 input,
@@ -223,13 +223,17 @@ input[type="checkbox"]:checked:after{
 }
 @media only screen and (max-width: 82rem) {
 	body{
-		width: 90vw;
+		width: 95vw;
 	}
 	main{
 		width: 90%;
+		margin: 0;
 	}
 	label{
 		font-size: .9em;
+	}
+	.output{
+		margin: 0;
 	}
 }
 @media only screen and (max-width: 31.188rem){
@@ -242,6 +246,14 @@ input[type="checkbox"]:checked:after{
 	main{
 		width: 99%;
 		height: 100%;
+		padding: 5px;
+	}
+	ul{
+		margin: 0;
+		padding: 2px;
+	}
+	ul>li{
+		margin: 0;
 	}
 	.input{
 		flex-direction: column;
