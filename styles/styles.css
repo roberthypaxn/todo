@@ -156,6 +156,10 @@ input[type="checkbox"]:checked:after{
 	color: rgb(253, 171, 171);
 	font-weight: bold;
 }
+footer *{
+	color: #f0f8ff;
+	text-align: center;
+}
 @media (hover: hover){
 	button:hover{
 		background-color: rgb(179, 179, 255);
